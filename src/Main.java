@@ -1,8 +1,11 @@
 import domain.Funcionarios;
 import domain.Pessoa;
 
-import java.util.*;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 
@@ -17,70 +20,70 @@ public class Main {
 
         maria = new Funcionarios(
                 "Maria",
-                LocalDate.of(2000, 10, 18).atStartOfDay(),
+                LocalDate.of(2000, 10, 18),
                 2009.44,
                 "Operador"
                 );
 
         joao = new Funcionarios(
                 "João",
-                LocalDate.of(1990, 5, 12).atStartOfDay(),
+                LocalDate.of(1990, 5, 12),
                 2284.38,
                 "Operador"
         );
 
         caio = new Funcionarios(
                 "Caio",
-                LocalDate.of(1961, 5, 2).atStartOfDay(),
+                LocalDate.of(1961, 5, 2),
                 9836.14,
                 "Coordenador"
         );
 
         miguel = new Funcionarios(
                 "Miguel",
-                LocalDate.of(1988, 10, 14).atStartOfDay(),
+                LocalDate.of(1988, 10, 14),
                 19119.88,
                 "Diretor"
         );
 
         alice = new Funcionarios(
                 "Alice",
-                LocalDate.of(1995, 1, 5).atStartOfDay(),
+                LocalDate.of(1995, 1, 5),
                 2234.68,
                 "Recepcionista"
         );
 
         heitor = new Funcionarios(
                 "Heitor",
-                LocalDate.of(1999, 11, 19).atStartOfDay(),
+                LocalDate.of(1999, 11, 19),
                 1582.72,
                 "Operador"
         );
 
         arthur = new Funcionarios(
                 "Arthur",
-                LocalDate.of(1993, 3, 31).atStartOfDay(),
+                LocalDate.of(1993, 3, 31),
                 4071.84,
                 "Contador"
         );
 
         laura = new Funcionarios(
                 "Laura",
-                LocalDate.of(1994, 7, 8).atStartOfDay(),
+                LocalDate.of(1994, 7, 8),
                 3017.45,
                 "Gerente"
         );
 
         heloisa = new Funcionarios(
                 "Heloísa",
-                LocalDate.of(2003, 5, 24).atStartOfDay(),
+                LocalDate.of(2003, 5, 24),
                 1606.85,
                 "Eletricista"
         );
 
         helena = new Funcionarios(
                 "Helena",
-                LocalDate.of(1996, 9, 2).atStartOfDay(),
+                LocalDate.of(1996, 9, 2),
                 2799.93,
                 "Gerente"
         );
