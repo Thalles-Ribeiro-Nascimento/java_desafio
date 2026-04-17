@@ -1,6 +1,6 @@
 package domain;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.Objects;
 
 public class Pessoa {
@@ -8,7 +8,7 @@ public class Pessoa {
      * Atributos da classe. Privados para garantir o encapsulamento dos dados
      */
     private String nome;
-    private LocalDateTime dataNascimento;
+    private LocalDate dataNascimento;
 
     /*
      * Construtor padrão
@@ -19,7 +19,7 @@ public class Pessoa {
     /*
      * Construtor com parâmetros
      */
-    public Pessoa(String nome, LocalDateTime dataNascimento) {
+    public Pessoa(String nome, LocalDate dataNascimento) {
         this.nome = nome;
         this.dataNascimento = dataNascimento;
     }
@@ -35,16 +35,16 @@ public class Pessoa {
         this.nome = nome;
     }
 
-    public LocalDateTime getDataNascimento() {
+    public LocalDate getDataNascimento() {
         return dataNascimento;
     }
 
-    public void setDataNascimento(LocalDateTime dataNascimento) {
+    public void setDataNascimento(LocalDate dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 
     public int idadePessoa(){
-        int anoAtual = LocalDateTime.now().getYear();
+        int anoAtual = LocalDate.now().getYear();
         int anoNascimentoFuncionario = this.dataNascimento.getYear();
         return anoAtual - anoNascimentoFuncionario;
     }
