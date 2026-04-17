@@ -3,7 +3,7 @@ package domain;
 import java.time.LocalDate;
 import java.util.Objects;
 
-public class Pessoa {
+public abstract class Pessoa {
     /*
      * Atributos da classe. Privados para garantir o encapsulamento dos dados
      */
