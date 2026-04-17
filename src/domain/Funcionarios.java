@@ -2,7 +2,6 @@ package domain;
 
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.time.ZoneId;
 import java.time.ZoneOffset;
 import java.util.Date;
 
@@ -10,9 +9,6 @@ public class Funcionarios extends Pessoa {
 
     private double salario;
     private String funcao;
-
-    public Funcionarios() {
-    }
 
     public Funcionarios(String nome, LocalDate dataNascimento, double salario, String funcao) {
         super(nome, dataNascimento);
