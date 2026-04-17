@@ -11,12 +11,6 @@ public class Pessoa {
     private LocalDate dataNascimento;
 
     /*
-     * Construtor padrão
-     */
-    public Pessoa() {
-    }
-
-    /*
      * Construtor com parâmetros
      */
     public Pessoa(String nome, LocalDate dataNascimento) {
@@ -49,21 +43,4 @@ public class Pessoa {
         return anoAtual - anoNascimentoFuncionario;
     }
 
-
-    /*
-     * Métodos Equals - verifica se dois objetos são iguais
-     */
-    @Override
-    public boolean equals(Object obj) {
-        if (!(obj instanceof Pessoa pessoa)) return false;
-        return Objects.equals(nome, pessoa.nome);
-    }
-
-    /*
-     * Métodos HashCode - Cria um número do tipo Inteiro para representar um objeto da classe Pessoa
-     */
-    @Override
-    public int hashCode() {
-        return Objects.hash(nome);
-    }
 }
