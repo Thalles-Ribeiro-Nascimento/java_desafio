@@ -1,8 +1,9 @@
 package domain;
 
 import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.time.ZoneId;
+import java.time.ZoneOffset;
 import java.util.Date;
 
 public class Funcionarios extends Pessoa {
@@ -13,7 +14,7 @@ public class Funcionarios extends Pessoa {
     public Funcionarios() {
     }
 
-    public Funcionarios(String nome, LocalDateTime dataNascimento, double salario, String funcao) {
+    public Funcionarios(String nome, LocalDate dataNascimento, double salario, String funcao) {
         super(nome, dataNascimento);
         this.salario = salario;
         this.funcao = funcao;
@@ -42,7 +43,7 @@ public class Funcionarios extends Pessoa {
     @Override
     public String toString() {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-        String dataFormatada = sdf.format(Date.from(this.getDataNascimento().atZone(ZoneId.systemDefault()).toInstant()));
+        String dataFormatada = sdf.format(Date.from(this.getDataNascimento().atStartOfDay().toInstant(ZoneOffset.UTC)));
         return String.format("Nome: %s%n" +
                 "Data de nascimento: %s%n" +
                 "Salário: R$ %,.2f%n" +
